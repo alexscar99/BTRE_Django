@@ -11,7 +11,7 @@
 -    Django Framework
 -    PostgreSQL Database
 
-### Topics Covered
+## Topics Covered
 
 -    Virtual environments
 -    Django apps and templates
