@@ -2,7 +2,8 @@
 
 -    BTRE_Django is an example project given by a fictional company called BT Real Estate.
 -    This project is a web application built in Python with the Django Framework.
--    The company can add their property listings as well as have users search, browse, make inquiries, and add realtors.
+-    The company, using an admin dashboard, can add and edit their property listings and realtors.
+-    Users can search, browse, and make inquiries on any properties that are published.
 
 ## Tech Used
 
