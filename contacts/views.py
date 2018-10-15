@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
 from .models import Contact
-from .contact_secret import HOST_USER_EMAIL, REALTOR_EMAIL
 
 
 def contact(request):
@@ -43,7 +42,7 @@ def contact(request):
             'Property Listing Inquiry',
             'There has been an inquiry for ' + listing +
             '. Sign into the admin panel for more info',
-            HOST_USER_EMAIL, [realtor_email, REALTOR_EMAIL],
+            'alex@scarlettdev.io', [realtor_email, 'alex@scarlettdev.io'],
             fail_silently=False)
 
         messages.success(
