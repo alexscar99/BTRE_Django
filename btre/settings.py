@@ -1,4 +1,6 @@
 import os
+from django.contrib.messages import constants as messages
+from .secret_settings import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -6,8 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('BTRE_SECRET_KEY')
+# Secret Key
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -62,8 +64,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'btre.wsgi.application'
 
 # Database
-from .secret_settings import DB_NAME, DB_USER, DB_PASS
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -75,8 +75,6 @@ DATABASES = {
 }
 
 # Password validation
-# https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
@@ -121,13 +119,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Messages
-from django.contrib.messages import constants as messages
-
 MESSAGE_TAGS = {messages.ERROR: 'danger'}
 
 # Email Config
-from .secret_settings import EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASS, EMAIL_PORT
-
 EMAIL_HOST = EMAIL_HOST
 EMAIL_HOST_USER = EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = EMAIL_HOST_PASS
