@@ -1,6 +1,5 @@
 import os
 from django.contrib.messages import constants as messages
-from .secret_settings import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -8,8 +7,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# Secret Key
-SECRET_KEY = SECRET_KEY
+# Secret Key --> For Dev ONLY (changed for prod)
+SECRET_KEY = "WZ1SWHOKhYFYsnnj#mINLHEs$9oMQwv(heOWSHA63kDd$*esXJ"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -63,13 +62,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'btre.wsgi.application'
 
-# Database
+# Database --> FOR DEV ONLY (changed for prod)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASS,
+        'NAME': 'btre_db',
+        'USER': 'postgres',
+        'PASSWORD': '12345',
         'HOST': 'localhost'
     }
 }
