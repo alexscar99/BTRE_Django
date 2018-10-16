@@ -42,7 +42,8 @@ def contact(request):
             'Property Listing Inquiry',
             'There has been an inquiry for ' + listing +
             '. Sign into the admin panel for more info',
-            'alex@scarlettdev.io', [realtor_email, 'alex@scarlettdev.io'],
+            'scarlettdevprojects@gmail.com',
+            [realtor_email, 'alex@scarlettdev.io'],
             fail_silently=False)
 
         messages.success(
